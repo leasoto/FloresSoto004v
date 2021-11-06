@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" color ="primary" mode ="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-row>
+    <center>
+    <ion-title >Iniciar sesión</ion-title>
+  </center>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form>
+    <ion-card-header>
+      <ion-card-title>Inicio de sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input formControlName="nombre" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+    </ion-card-content>
+ 
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="ingresar()" type="submit" color="success"  expand="block">Ingresar</ion-button>
+      <ion-col>
+        <center>
+      <a  routerLink="/login" class="pass2">¿Olvidaste tu contraseña?</a>
+      </center>
+      <br>
+      <center>
+        <a [routerLink]="['/registro']" class="cuenta">¿No Tienes cuenta?</a>
+      </center>
+      </ion-col>
+    </ion-col>
+  </ion-row>
+</form>
+</ion-content>
+
